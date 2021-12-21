@@ -272,7 +272,10 @@ public class DamageListener implements Listener
 			case DOLPHIN:
 				health = 3;
 				break;
-			case PIG_ZOMBIE:
+			case PIGLIN:
+				health = 3;
+				break;
+				case PIGLIN_BRUTE:
 				health = 3;
 				break;
 			case SHEEP:
