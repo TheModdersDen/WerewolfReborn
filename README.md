@@ -1,8 +1,5 @@
 Werewolf
 ======
-
-FORK INFO: THE PLUGIN IS BEING UPDATED TO 1.18.X
-
 The plugin for adding werewolves into Minecraft!
 
 Background
@@ -41,10 +38,6 @@ Installation
 Links
 ---------
 
-###### Project
-* [Werewolf at SpigotMC](https://www.spigotmc.org/resources/werewolf.7442/)
-* [Werewolf at BukkitDev](https://dev.bukkit.org/bukkit-plugins/werewolf/)
-
 ###### Download
 * [BukkitDev](https://dev.bukkit.org/projects/werewolf/files/)
 * [SpigotMC](https://www.spigotmc.org/resources/werewolf/updates)
@@ -55,11 +48,6 @@ Links
 * [Configuration](https://github.com/DogOnFire/Werewolf/wiki/Configuration)
 * [Permissions](https://github.com/DogOnFire/Werewolf/wiki/Permissions)
 * [Commands](https://github.com/DogOnFire/Werewolf/wiki/Commands)
-
-###### Developers
-* [License (GPLv3)](https://github.com/DogOnFire/Werewolf/blob/master/LICENSE.txt)
-* [API](https://github.com/DogOnFire/Docs/wiki/API)
-* [Contribute](https://github.com/DogOnFire/Werewolf/blob/master/CONTRIBUTING.md)
 
 ###### Related Plugins
 * [ProtocolLib at BukkitDev](https://dev.bukkit.org/bukkit-plugins/protocollib)
