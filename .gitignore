@@ -14,3 +14,5 @@ dependency-reduced-pom.xml
 
 # Maven build
 /target/
+.vscode/tasks.json
+.vscode/settings.json
