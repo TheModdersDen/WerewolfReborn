@@ -11,7 +11,7 @@ website: http://dev.bukkit.org/server-mods/werewolf
 commands:
    werewolf:
       description: Command for the Werewolf plugin
-      usage: /<command> [toggle|infect|addbounty|check|reload|save|help|clan|list|transform|toggle|bounty|home|sethome|call|top|hunt|infectionpotion|curepotion|wolfbane|silversword|lorebook|on|off] [player]
+      usage: /werewolf <command> [player]
       aliases: [ww]
    growl:
       description: Command for Werewolves to growl
