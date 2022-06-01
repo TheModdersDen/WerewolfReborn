@@ -3,6 +3,8 @@ package com.dogonfire.werewolf.tasks;
 import com.dogonfire.werewolf.ClanManager;
 import com.dogonfire.werewolf.LanguageManager;
 import com.dogonfire.werewolf.Werewolf;
+
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -10,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+import org.bukkit.scoreboard.ScoreboardManager;
 
 public class DisguiseTask implements Runnable
 {
@@ -274,11 +277,11 @@ public class DisguiseTask implements Runnable
 
 		Werewolf.getWerewolfManager().setLastTransformation(this.player.getUniqueId());
 
-		// if (this.plugin.healthBarEnabled)
-		// {
-		// ScoreboardManager localScoreboardManager =
-		// Bukkit.getScoreboardManager();
-		// }
+		if (this.plugin.healthBarEnabled)
+		{
+			ScoreboardManager localScoreboardManager = Bukkit.getScoreboardManager();
+			player.setScoreboard(localScoreboardManager.getMainScoreboard());
+		}
 
 		if (this.plugin.useWerewolfGroupName)
 		{

@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dogonfire</groupId>
-    <artifactId>werewolf</artifactId>
+    <artifactId>Werewolf</artifactId>
     <version>0.0.1</version>
     <name>Werewolf</name>
     <description>Werewolves in Minecraft!</description>
@@ -50,8 +50,13 @@
             <url>https://repo.codemc.org/repository/maven-public/</url>
         </repository>
     </repositories>
-
     <dependencies>
+        <dependency>
+            <groupId>net.luckperms</groupId>
+            <artifactId>api</artifactId>
+            <version>5.4</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>me.zombie_striker</groupId>
             <artifactId>CustomItemFramework</artifactId>

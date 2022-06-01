@@ -18,18 +18,35 @@ public class PermissionsManager
 	private Permission	vaultPermission	= null;
 	private static Chat	vaultChat		= null;
 
-	public PermissionsManager(Werewolf p)
+	public PermissionsManager(Werewolf p, boolean luckPerms)
 	{
-		this.plugin = p;
-
-		if (p.vaultEnabled)
+		if (luckPerms = true) 
 		{
-			RegisteredServiceProvider<Permission> permissionProvider = plugin.getServer().getServicesManager().getRegistration(Permission.class);
-			vaultPermission = permissionProvider.getProvider();
+			this.plugin = p;
 
-			RegisteredServiceProvider<Chat> chatProvider = plugin.getServer().getServicesManager().getRegistration(Chat.class);
-			vaultChat = chatProvider.getProvider();
+			if (p.vaultEnabled)
+			{
+				RegisteredServiceProvider<Permission> permissionProvider = plugin.getServer().getServicesManager().getRegistration(Permission.class);
+				vaultPermission = permissionProvider.getProvider();
+
+				RegisteredServiceProvider<Chat> chatProvider = plugin.getServer().getServicesManager().getRegistration(Chat.class);
+				vaultChat = chatProvider.getProvider();
+			}
+		} 
+		else 
+		{
+			this.plugin = p;
+
+			if (p.vaultEnabled)
+			{
+				RegisteredServiceProvider<Permission> permissionProvider = plugin.getServer().getServicesManager().getRegistration(Permission.class);
+				vaultPermission = permissionProvider.getProvider();
+
+				RegisteredServiceProvider<Chat> chatProvider = plugin.getServer().getServicesManager().getRegistration(Chat.class);
+				vaultChat = chatProvider.getProvider();
+			}
 		}
+		
 	}
 
 	public void load()
@@ -71,7 +88,7 @@ public class PermissionsManager
 				{
 					if (permission.getName().contains(node))
 					{
-						this.plugin.logDebug("Heyy, it was the correct perm finally... Perm: " + permission.getName() + " - Node: " + node);
+						this.plugin.logDebug("Hey, it was the correct perm finally... Perm: " + permission.getName() + " - Node: " + node);
 						this.plugin.logDebug("Current permissionDefault: " + permission.getDefault().toString());
 						if (permission.getDefault() == PermissionDefault.TRUE)
 						{

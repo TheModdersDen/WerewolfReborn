@@ -153,6 +153,8 @@ public class Werewolf extends JavaPlugin
 	public static final String					NMS										= VersionFactory.getNmsVersion().toString();
 	private static boolean						isCompatible							= true;
 
+	private boolean 							hasLuckPerms 							= false;
+
 	public static Werewolf instance()
 	{
 		return instance;
@@ -408,7 +410,6 @@ public class Werewolf extends JavaPlugin
 			log("Vault not found. Werewolf bounties and signs are disabled.");
 		}
 
-		permissionsManager = new PermissionsManager(this);
 		/*
 		 * TODO: re-add Vampire integration..
 		 * 
@@ -424,6 +425,21 @@ public class Werewolf extends JavaPlugin
 			log("HealthBar plugin detected. Enabling support for healthbars.");
 
 			this.healthBarEnabled = true;
+		}
+
+		// Check for LuckPerms
+		if (pm.getPlugin("LuckPerms") != null && pm.getPlugin("LuckPerms").isEnabled())
+		{
+			log("LuckPerms plugin detected. Enabling support for luckperms.");
+
+			this.hasLuckPerms = true;
+			permissionsManager = new PermissionsManager(this, hasLuckPerms);
+
+		}
+		else 
+		{
+			this.hasLuckPerms = false;
+			permissionsManager = new PermissionsManager(this, hasLuckPerms);
 		}
 
 		// Check for PlaceholderAPI
